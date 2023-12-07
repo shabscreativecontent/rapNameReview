@@ -21,6 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/", (request, response) => {
+  // console.log(request);
   db.collection("rappers")
     .find()
     .sort({ likes: -1 })
